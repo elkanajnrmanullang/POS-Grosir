@@ -1,0 +1,7 @@
+{
+  "name": "@pos-grosir/shared",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "dependencies": {"@pos-grosir/shared": "workspace:*"}
+}

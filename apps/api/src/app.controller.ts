@@ -1,12 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { ApiResponse } from '@pos-grosir/shared';
 
-@Controller()
+@Controller('api')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('ping')
+  getPing(): ApiResponse<string> {
+    return {
+      success: true,
+      message: 'Backend API is live and connected!',
+      data: new Date().toISOString(),
+    };
   }
 }
